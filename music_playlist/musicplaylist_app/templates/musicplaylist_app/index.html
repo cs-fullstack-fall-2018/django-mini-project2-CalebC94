@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if Playlist %}
+<h1>Music Playlist</h1>
+<ul>
+    {% for Music in Playlist %}
+    <li>{{ Music.songName }}</li>
+    <li>{{ Music.album }}</li>
+    <li>{{ Music.artist }}</li>
+    <li>{{ Music.duration }}</li>
+    <li>{{ Music.rating }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
